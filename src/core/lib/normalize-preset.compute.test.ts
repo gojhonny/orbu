@@ -8,11 +8,9 @@ describe('core/normalize-preset', () => {
     expect(normalizeOrboPreset('unknown')).toBe(DEFAULT_ORBO_PRESET)
   })
 
-  it('accepts NeonGate and normalizes the deprecated published alias', () => {
+  it('accepts canonical presets and rejects unsupported names', () => {
     expect(isOrboPresetName('neongate')).toBe(true)
-    expect(isOrboPresetName('gojhonny')).toBe(true)
     expect(normalizeOrboPreset('neongate')).toBe('neongate')
-    expect(normalizeOrboPreset('gojhonny')).toBe('neongate')
     expect(normalizeOrboPreset('peach')).toBe('peach')
     expect(isOrboPresetName('unknown')).toBe(false)
   })

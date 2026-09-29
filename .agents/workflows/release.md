@@ -31,11 +31,11 @@ Trusted publishing can be configured only after that package exists on npm.
 Credentials are never committed or printed.
 
 ADR-0025/SPEC-034 make Orbo the product and `orbo-voice` the npm package, with
-CLI `orbo` and element `<orb-o>`. GitHub metadata targets `gojhonny/orbo`.
+CLI `orbo` and element `<orb-o>`. GitHub metadata targets `jonatassales/orbo`.
 ADR-0022/SPEC-031 and ADR-0024/SPEC-033 record the previous distribution
 identity. ADR-0021/SPEC-030 and ADR-0023/SPEC-032 record earlier unscoped names
 that npm rejected.
-The release guard runs when `github.repository` is `gojhonny/orbo`.
+The release guard runs when `github.repository` is `jonatassales/orbo`.
 
 The workflow publishes and verifies registry integrity and `orbo --help`
 before it creates the git tag or GitHub release. If npm rejects the package

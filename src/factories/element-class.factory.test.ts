@@ -18,15 +18,14 @@ describe('factory/element-class', () => {
     expect(createOrbo().shadowRoot).toBeNull()
   })
 
-  it('uses NeonGate by default and reflects canonical and deprecated preset assignments', () => {
+  it('uses NeonGate by default and reflects canonical preset assignments', () => {
     const orb = createOrbo()
     expect(orb.preset).toBe('neongate')
     orb.preset = 'neongate'
     expect(orb.getAttribute('preset')).toBe('neongate')
-    orb.setAttribute('preset', 'gojhonny')
+    orb.setAttribute('preset', 'unsupported')
     expect(orb.getAttribute('preset')).toBe('neongate')
     expect(orb.preset).toBe('neongate')
-    orb.preset = 'gojhonny'
     expect(orb.getAttribute('preset')).toBe('neongate')
     orb.preset = 'peach'
     expect(orb.getAttribute('preset')).toBe('peach')

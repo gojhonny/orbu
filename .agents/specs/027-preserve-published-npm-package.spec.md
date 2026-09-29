@@ -13,7 +13,7 @@ OrbZ was later renamed to OrbV. This record is historical evidence of preserving
 
 SPEC-026 changed the npm identity along with the GitHub owner. The owner has
 clarified that the published package must remain `@neongate-ai/orbz`, while the
-repository remains `gojhonny/orbz`. The registry currently reports version 1.0.0
+repository remains under its then-current personal account. The registry currently reports version 1.0.0
 for the existing package; changing its name would create a separate package.
 
 ## Scope
@@ -29,13 +29,13 @@ No ZIP edits, merge, tag, token configuration or package publication.
 ## Requirements
 
 1. `package.json#name` remains `@neongate-ai/orbz`; GitHub repository and issue
-   URLs remain under `gojhonny/orbz`, with author/copyright `gojhonny`.
+   URLs, author, and copyright followed the then-current personal account.
 2. All active consumer examples and the real installer use the existing npm
    package and its entry points. The installer selects its own version, rejects
    unrelated package names and self-installation, and preserves consumer source.
 3. Release identity checks, tarball filename, registry lookups and post-publish
    validation target `@neongate-ai/orbz`. The workflow's GitHub owner guard and
-   repository URL remain `gojhonny/orbz`.
+   repository URL remains under the then-current personal account.
 4. Replace the blanket previous-brand audit with precise package/repository
    invariants: permit the existing npm package, reject stale GitHub ownership,
    and reject the abandoned npm name in active implementation/guidance.

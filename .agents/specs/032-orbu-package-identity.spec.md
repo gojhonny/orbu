@@ -14,13 +14,13 @@ The live package still presents as Orb Voice (`orb-voice`, `<orb-voice>`, `defin
 
 Rename the current product identity across active source, package metadata, the public CLI, imports, dist filenames, events, CSS tokens, installer snippets, audits, CI checks, and the consumer README.
 
-The npm package is `orbu`. The only runtime element is `<orb-u>`. Public types use `Orbu*` / `ORBU_*`. Events are `orbu-*`. CSS classes are `.orbu-*` and custom properties are `--orbu-*`. GitHub metadata targets `gojhonny/orbu`.
+The npm package is `orbu`. The only runtime element is `<orb-u>`. Public types use `Orbu*` / `ORBU_*`. Events are `orbu-*`. CSS classes are `.orbu-*` and custom properties are `--orbu-*`. GitHub metadata targets the then-current GitHub repository.
 
 Do not register `<orbu>` or `<orb-voice>`. Do not keep an `orb-voice` binary or dual-dispatch `orb-voice-*` events. Do not publish, deprecate `orb-voice`, reset the version from `1.1.1`, or rewrite historical SPEC and ADR bodies. Preserve the NeonGate preset, the homepage `https://neongate.com.br/docs/orbz/overview`, and internal `orb_*` / `ORB_*` shell helpers.
 
 ## Requirements
 
-1. `package.json#name` is `orbu`. Repository and bugs URLs use `gojhonny/orbu`. Homepage stays `https://neongate.com.br/docs/orbz/overview`. Version stays `1.1.1`.
+1. `package.json#name` is `orbu`. Repository and bugs URLs use the then-current GitHub repository. Homepage stays `https://neongate.com.br/docs/orbz/overview`. Version stays `1.1.1`.
 2. `ORBU_TAG_NAME` is `orb-u`. React intrinsics, queries, and docs match. `customElements.define` is not called with `orbu` or `orb-voice`.
 3. The published binary is `orbu`. Consumer setup is `npx orbu --setup`. Engineering commands are `orbu <command>` and `./cli/orbu <command>`.
 4. Consumer imports use `orbu`, `orbu/browser`, `orbu/react-types`, and `orbu/standalone`. Dist entries are `dist/orbu.js` and `dist/standalone/orbu.js`.

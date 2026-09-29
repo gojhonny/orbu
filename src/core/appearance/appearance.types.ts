@@ -2,9 +2,7 @@ import type { ORBO_PRESET_NAMES, ORBO_REDUCED_MOTION_MODES, ORBO_STATES } from '
 
 export type OrboState = (typeof ORBO_STATES)[number]
 export type OrboReducedMotion = (typeof ORBO_REDUCED_MOTION_MODES)[number]
-/** @deprecated Use neongate; the accidentally published name remains accepted. */
-type LegacyPresetName = 'gojhonny'
-export type OrboPresetName = (typeof ORBO_PRESET_NAMES)[number] | LegacyPresetName
+export type OrboPresetName = (typeof ORBO_PRESET_NAMES)[number]
 export type OrboSize = number | string
 
 export interface OrboColors {

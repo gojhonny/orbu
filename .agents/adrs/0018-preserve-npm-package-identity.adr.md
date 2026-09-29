@@ -16,11 +16,11 @@ The GitHub move does not require changing consumer dependency or import strings.
 ## Decision
 
 Keep `@neongate-ai/orbz` and its entry points as the published package identity.
-Use `gojhonny/orbz` for GitHub URLs, release workflow ownership and npm trusted
-publisher repository configuration. Keep author/copyright `gojhonny`.
+Use the then-current personal repository for GitHub URLs, release workflow ownership
+and npm trusted publisher configuration. The author and copyright followed that account.
 
 This partially supersedes ADR-0017: only its npm-scope migration is reversed.
-The `gojhonny` runtime preset, Orb CLI cleanup behavior and renamed image stay
+The account-derived runtime preset, Orb CLI cleanup behavior and renamed image stay
 as implemented by SPEC-026. The `orb` binary and `<orb-z>` element are unchanged.
 
 ## Consequences

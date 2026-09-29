@@ -9,7 +9,7 @@
 
 ADR-0023 and SPEC-032 renamed the live package from Orb Voice to Orbu, with npm name `orbu` and custom element `<orb-u>`. That change merged as pull request #28. npm then rejected the unscoped name `orbu` under its package-name similarity policy.
 
-`orb-voice` is published and is the package identity to keep. The GitHub repository is being renamed back to `gojhonny/orb-voice` separately from this source change.
+`orb-voice` is published and is the package identity to keep. The GitHub repository rename was a separate action after this source change.
 
 ## Decision
 
@@ -17,7 +17,7 @@ Orb Voice is the canonical current identity:
 
 - Brand: Orb Voice
 - npm: `orb-voice`
-- GitHub metadata: `gojhonny/orb-voice`
+- GitHub metadata: the then-current GitHub repository
 - Custom element: `<orb-voice>` only
 - Public CLI: `orb-voice`, with consumer setup `npx orb-voice --setup`
 - Events: `orb-voice-*`

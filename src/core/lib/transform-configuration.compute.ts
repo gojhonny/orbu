@@ -16,14 +16,8 @@ import { readOrboConfigurationSource } from './validate-configuration.compute'
  */
 export function transformOrboConfiguration(input: unknown): OrboConfiguration {
   const source = readOrboConfigurationSource(input)
-  // Keep the published palette lookup without exposing a seventh preset.
-  const presets = Object.defineProperty(source.appearance.presets, 'gojhonny', {
-    value: source.appearance.presets.neongate,
-    enumerable: false
-  }) as OrboConfiguration['appearance']['presets']
   return deepFreezeOrboConfiguration({
     ...source,
-    appearance: { ...source.appearance, presets },
     component: {
       ...source.component,
       observedAttributes: [

@@ -58,9 +58,9 @@ status only when the corresponding evidence is available.
 
 ## CLI cleanup and ownership
 
-- [SPEC-026](026-cli-cleanup-and-gojhonny-ownership.spec.md): implemented; repair
+- [SPEC-026](026-cli-cleanup-and-legacy-ownership.spec.md): implemented; repair
   default and nested dependency cleanup, protect tracked/generated boundaries,
-  migrate package identity to `gojhonny`, and refresh docs and deterministic audits.
+  migrate package identity to the then-current personal account, and refresh docs and deterministic audits.
   Delivery is one PR against `staging`; no merge, version bump, tag or publication.
   SPEC-027 supersedes its npm identity migration only.
   SPEC-028 subsequently supersedes its preset rename while preserving colors.
@@ -103,3 +103,6 @@ status only when the corresponding evidence is available.
 - [SPEC-034](034-orbo-product-identity.spec.md): current identity. Product Orbo,
   npm `orbo-voice`, element `<orb-o>`, and CLI `orbo`. Version stays `1.1.1`.
   Do not publish from this change.
+- [SPEC-035](035-retire-account-derived-identity.spec.md): current owner metadata,
+  Neongate AI copyright, and removal of the deprecated account-derived preset.
+  A later major release is separately approved.

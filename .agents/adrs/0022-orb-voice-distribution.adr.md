@@ -19,7 +19,7 @@ leave current-state source.
 
 Orb Voice is the product name. The npm package, public CLI, import path, and
 custom element tag are `orb-voice`. GitHub metadata targets
-`gojhonny/orb-voice`. The owner renames that repository before the release
+the then-current GitHub repository. The owner renames that repository before the release
 guard can publish.
 
 Do not register the previous element tag. Do not keep the previous package name

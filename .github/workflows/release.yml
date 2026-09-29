@@ -1,9 +1,6 @@
 name: Release
 
 on:
-  push:
-    branches: [main]
-    paths: [package.json]
   workflow_dispatch:
 
 permissions:
@@ -15,7 +12,7 @@ concurrency:
 
 jobs:
   publish:
-    if: github.repository == 'gojhonny/orbo' && github.ref == 'refs/heads/main'
+    if: github.repository == 'jonatassales/orbo' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:

@@ -26,8 +26,8 @@ bump, tag, merge or publication is part of this change.
 1. NeonGate is the default palette; its canonical identifier is `neongate`.
    The six canonical preset names and five NeonGate colors remain stable.
 2. HTML attributes and properties accept `neongate` and reflect that identifier.
-   The deprecated `gojhonny` input normalizes to `neongate` and stays type-safe.
-3. Preserve direct `ORBZ_PRESETS.gojhonny` and runtime-configuration palette
+   The deprecated account-derived input normalizes to `neongate` and stays type-safe.
+3. Preserve direct access through the account-derived preset key and runtime-configuration palette
    reads through one non-enumerable, immutable alias to the NeonGate palette.
    Canonical preset enumeration never presents the alias as another palette.
 4. The pure configuration transformer accepts the previously published compact

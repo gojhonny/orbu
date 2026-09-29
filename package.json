@@ -4,7 +4,7 @@
   "description": "A framework-agnostic, customizable AI voice orb built as a strict, SSR-safe web component.",
   "type": "module",
   "license": "MIT",
-  "author": "gojhonny",
+  "author": "jonatassales",
   "main": "./dist/orbo.js",
   "module": "./dist/orbo.js",
   "types": "./dist/orbo.d.ts",
@@ -23,10 +23,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gojhonny/orbo.git"
+    "url": "git+https://github.com/jonatassales/orbo.git"
   },
   "bugs": {
-    "url": "https://github.com/gojhonny/orbo/issues"
+    "url": "https://github.com/jonatassales/orbo/issues"
   },
   "homepage": "https://neongate.com.br/docs/orbz/overview",
   "keywords": [

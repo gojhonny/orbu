@@ -57,7 +57,7 @@ Component package remains framework-agnostic.
 
 ADR-0018 restores the existing published identity `@neongate-ai/orbz` after
 ADR-0017's proposed npm migration, without changing this explicit installer
-architecture. GitHub ownership remains `gojhonny/orbz`.
+architecture. GitHub ownership remains with the then-current personal account.
 
 ## Evidence
 

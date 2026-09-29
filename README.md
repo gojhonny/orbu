@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://paladini.io/harness-score/guide/maturity-model.html"><img alt="Harness Score L4" src="https://paladini.github.io/harness-score/maturity/badge-l4.svg" height="20"></a>
-  <a href="https://github.com/gojhonny/orbo/actions/workflows/ci.yml"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/gojhonny/orbo/ci.yml?branch=main&label=tests&logo=github" height="20"></a>
+  <a href="https://github.com/jonatassales/orbo/actions/workflows/ci.yml"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/jonatassales/orbo/ci.yml?branch=main&label=tests&logo=github" height="20"></a>
   <a href="https://www.npmjs.com/package/orbo-voice"><img alt="npm version" src="https://img.shields.io/npm/v/orbo-voice?logo=npm" height="20"></a>
 </p>
 
@@ -603,4 +603,4 @@ integration guides and API documentation are available at
 
 ## License
 
-[MIT](./LICENSE) © gojhonny
+[MIT](./LICENSE) © Neongate AI

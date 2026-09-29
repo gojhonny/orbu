@@ -30,18 +30,15 @@ state or a user launcher for application consumers. Harness-score remains
 explicit engineering-only tooling and is never part of the runtime API.
 
 ADR-0025/SPEC-034 make Orbo the product, `orbo-voice` the npm package, `orbo`
-the CLI, and `<orb-o>` the element. GitHub metadata targets `gojhonny/orbo`.
+the CLI, and `<orb-o>` the element. GitHub metadata targets `jonatassales/orbo`.
 ADR-0022/SPEC-031 and ADR-0024/SPEC-033 record the previous distribution
 identity. ADR-0023/SPEC-032 record a rejected unscoped rename. ADR-0021/SPEC-030
 record the earlier rejected package name. ADR-0018/SPEC-027 are historical records of the previous
-scoped npm name. ADR-0019/SPEC-028 restore NeonGate (`neongate`) as the canonical default and keep
-the accidentally published `gojhonny` name only as a deprecated compatibility
-alias. The correction carries forward main's 1.0.1 metadata into staging without
-a new bump or publication. npm consumers receive it only with a future release;
-until then, examples can select NeonGate through `DEFAULT_ORBO_PRESET` or omit
-the explicit preset, preserving compatibility with the existing 1.0.1 package.
-Configure the existing npm package's publisher for the current GitHub repository;
-the npm and GitHub account names do not need to match. Never overwrite a published
-version or move its release tag.
+scoped npm name. ADR-0019/SPEC-028 restored NeonGate (`neongate`) as the canonical default.
+SPEC-035 removes the account-derived compatibility alias from current source. This
+is a breaking change and needs a separately approved major release. Keep the
+current published version immutable and do not publish by merging a metadata PR.
+Configure the publisher for `jonatassales/orbo`; npm and GitHub account names do
+not need to match. Never overwrite a published version or move its release tag.
 
 Agent runtime guardrails deny autonomous package publication and require human approval for tag, push, merge/rebase, and PR-merge boundaries. These hooks supplement, but do not replace, Orbo checks, Git hooks, and CI.

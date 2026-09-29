@@ -8,9 +8,9 @@
 ## Context
 
 ADR-0018 kept npm identity `@neongate-ai/orbz` independent from GitHub ownership
-`gojhonny/orbz`, with public binary `orb` and custom element `<orb-z>`. The owner
+the then-current GitHub repository, with public binary `orb` and custom element `<orb-z>`. The owner
 has now selected a single current product identity: OrbV, unscoped npm package
-`orbv`, GitHub `gojhonny/orbv`, element `<orb-v>`, and public CLI `orbv`.
+`orbv`, the GitHub repository used at the time, element `<orb-v>`, and public CLI `orbv`.
 
 Keeping the previous names as aliases would leave a mixed identity in current
 source. The old npm package remains published until a later deprecation.
@@ -21,7 +21,7 @@ OrbV is the canonical current identity of this library:
 
 - Brand: OrbV
 - npm: `orbv`
-- GitHub metadata: `gojhonny/orbv`
+- GitHub metadata: the then-current GitHub repository
 - Custom element: `<orb-v>` only
 - Public CLI: `orbv`, with consumer setup `npx orbv --setup`
 - Consumer docs homepage: `https://neongate.com.br/docs/orbz/overview`

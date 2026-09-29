@@ -17,7 +17,7 @@ Rename active product, package, CLI, element, event, CSS, configuration, build, 
 ## Requirements
 
 - The package name is `orbo-voice` and the version remains `1.1.1`.
-- Repository and bugs metadata target `gojhonny/orbo`.
+- Repository and bugs metadata target `jonatassales/orbo`.
 - The custom element is `<orb-o>`, registered by `defineOrbo`.
 - Public types use `Orbo*` / `ORBO_*`, keeping `Voice` only for the voice domain.
 - The binary is `orbo` at `./cli/orbo`. Consumer setup is `npx orbo-voice --setup`.
@@ -47,4 +47,4 @@ Rename active product, package, CLI, element, event, CSS, configuration, build, 
 
 ## Compatibility and risks
 
-This is a breaking public API rename. There is no `orb-voice` alias. `orbo-voice` is a new npm identity and does not replace the published `orb-voice` package. The release guard does not publish while the GitHub repository is still `gojhonny/orb-voice`.
+This was a breaking public API rename. There is no `orb-voice` alias. `orbo-voice` is a separate npm identity; publication remained outside that source change.
