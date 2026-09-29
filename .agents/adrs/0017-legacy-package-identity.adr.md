@@ -1,4 +1,4 @@
-# ADR-0017: Move Orbz package identity to gojhonny
+# ADR-0017: Move Orbz package identity to the then-current account
 
 - Status: Accepted; npm identity decision superseded by ADR-0018
 - Created: 2026-09-08
@@ -11,13 +11,13 @@ GitHub owner, author/assets and default-preset decisions.
 
 ## Context
 
-The owner moved the repository to `gojhonny/orbz` and requested complete removal
+The owner moved the repository to the personal account used at the time and requested complete removal
 of previous-owner references, including package metadata and named presets.
 
 ## Decision
 
-Use `@gojhonny/orbz` for the library and its entry points, `gojhonny/orbz` for
-repository/release automation and `gojhonny` for the default preset key. Keep
+Use the then-current personal npm scope and GitHub repository for library and release
+automation, and derive the default preset key from that account. Keep
 `orb` as the CLI binary and `<orb-z>` as the single runtime UI. Palette values,
 voice activation, credential ownership and SSR boundaries are unchanged.
 

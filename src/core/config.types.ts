@@ -14,11 +14,6 @@ export type OrboPresetNames = readonly [
   'mocha',
   'ivory'
 ]
-/** @deprecated Use the canonical NeonGate identifier in new configuration. */
-type LegacyPresetNames = readonly ['gojhonny', ...OmitFirst<OrboPresetNames>]
-type OmitFirst<T extends readonly unknown[]> = T extends readonly [unknown, ...infer Rest]
-  ? Rest
-  : never
 export type OrboColorKeys = readonly ['accent', 'background', 'highlight', 'primary', 'secondary']
 
 type State = OrboStates[number]
@@ -54,21 +49,6 @@ export interface OrboAppearanceConfiguration {
   colorAttributes: { [Key in Color]: `color-${Key}` }
   presets: Record<Preset, Record<Color, string>>
   byState: Record<State, { contrast: number; saturation: number }>
-}
-
-/** Compatibility input for the preset identifier accidentally published in 1.0.1. */
-interface LegacyAppearanceConfiguration
-  extends Omit<OrboAppearanceConfiguration, 'defaultPreset' | 'presetNames' | 'presets'> {
-  defaultPreset: LegacyPresetNames[number]
-  presetNames: LegacyPresetNames
-  presets: Record<LegacyPresetNames[number], Record<Color, string>>
-}
-
-interface OrboRuntimeAppearanceConfiguration extends OrboAppearanceConfiguration {
-  presets: OrboAppearanceConfiguration['presets'] & {
-    /** @deprecated Use neongate; retained as a non-enumerable palette alias. */
-    gojhonny: Record<Color, string>
-  }
 }
 
 export interface OrboMotionConfigurationSource {
@@ -120,10 +100,7 @@ export interface OrboRealtimeConfiguration {
 /** Compact build input; legacy internal overrides remain supported. */
 export interface OrboConfigurationSource {
   component: OrboComponentConfiguration
-  appearance: (
-    | Omit<OrboAppearanceConfiguration, 'byState'>
-    | Omit<LegacyAppearanceConfiguration, 'byState'>
-  ) & {
+  appearance: Omit<OrboAppearanceConfiguration, 'byState'> & {
     byState?: OrboAppearanceConfiguration['byState']
   }
   motion?: OrboMotionConfigurationSource
@@ -147,7 +124,7 @@ export interface OrboMotionConfiguration
 
 export interface OrboRuntimeConfiguration
   extends Omit<OrboResolvedConfigurationSource, 'appearance' | 'motion'> {
-  appearance: OrboRuntimeAppearanceConfiguration
+  appearance: OrboAppearanceConfiguration
   motion: OrboMotionConfiguration
 }
 

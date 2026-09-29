@@ -7,7 +7,7 @@
 
 ## Context
 
-ADR-0022 made `orb-voice` the npm package, public CLI, import path, and custom element `<orb-voice>`. The owner has selected Orbu as the product name and `orbu` as the npm package. The repository is `gojhonny/orbu`.
+ADR-0022 made `orb-voice` the npm package, public CLI, import path, and custom element `<orb-voice>`. The owner has selected Orbu as the product name and `orbu` as the npm package. The repository retained its then-current name.
 
 A custom element name must contain a hyphen, so `<orbu>` cannot be registered. The owner selected `<orb-u>`.
 
@@ -17,7 +17,7 @@ Orbu is the current identity of this library:
 
 - Brand: Orbu
 - npm: `orbu`
-- GitHub metadata: `gojhonny/orbu`
+- GitHub metadata: the then-current GitHub repository
 - Custom element: `<orb-u>` only
 - Public CLI: `orbu`, with consumer setup `npx orbu --setup`
 - Events: `orbu-*`

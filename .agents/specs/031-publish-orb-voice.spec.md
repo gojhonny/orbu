@@ -31,7 +31,7 @@ Historical SPECs and ADRs may still name the rejected identifier. Do not move
    `.orb-voice-*`.
 3. Dist entries are `dist/orb-voice.js` and `dist/standalone/orb-voice.js`.
    Imports use `orb-voice` and `orb-voice/browser`.
-4. GitHub metadata targets `gojhonny/orb-voice`. Current-state files do not
+4. GitHub metadata targets the then-current GitHub repository. Current-state files do not
    contain the rejected distribution identifier.
 5. The release workflow publishes and verifies `orb-voice --help` before it
    creates `v1.1.1` or the GitHub release titled `Orb Voice 1.1.1`.
@@ -65,4 +65,4 @@ Historical SPECs and ADRs may still name the rejected identifier. Do not move
 This replaces an unpublished package name and the element tag. `v1.1.0` remains
 an immutable tag for a release that never reached npm. npm may still reject
 `orb-voice` at publish time. The release guard does not run until the GitHub
-repository name matches `gojhonny/orb-voice`.
+repository name matches the then-current GitHub repository.

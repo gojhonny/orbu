@@ -51,7 +51,7 @@ fi
 
 for token in \
   'paladini.github.io/harness-score/maturity/badge-l4.svg' \
-  'github/actions/workflow/status/gojhonny/orbo/ci.yml' \
+  'github/actions/workflow/status/jonatassales/orbo/ci.yml' \
   'img.shields.io/npm/v/orbo-voice'
 do
   if grep -F "$token" README.md >/dev/null 2>&1; then

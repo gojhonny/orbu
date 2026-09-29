@@ -18,7 +18,7 @@ Keep ADR-0023 and SPEC-032 as historical records of the rejected rename, marked 
 
 ## Requirements
 
-1. `package.json#name` is `orb-voice`. Version stays `1.1.1`. Repository and bugs URLs use `gojhonny/orb-voice`.
+1. `package.json#name` is `orb-voice`. Version stays `1.1.1`. Repository and bugs URLs use the then-current GitHub repository.
 2. The only custom element is `<orb-voice>`. Public registration is `defineOrbVoice`. Public types use `OrbVoice*` and `ORB_VOICE_*`.
 3. The published binary is `orb-voice`. Consumer setup is `npx orb-voice --setup`.
 4. Imports use `orb-voice`, `orb-voice/browser`, `orb-voice/react-types`, `orb-voice/standalone`, and `orb-voice/index.css`. Dist entries are `dist/orb-voice.js` and `dist/standalone/orb-voice.js`.
@@ -27,7 +27,7 @@ Keep ADR-0023 and SPEC-032 as historical records of the rejected rename, marked 
 ## Acceptance criteria
 
 - [x] The revert of merge `9e7f4db` restores the pre-Orbu tree before the historical-record additions.
-- [x] Package name, bin, exports, repository, and bugs match `orb-voice` and `gojhonny/orb-voice`.
+- [x] Package name, bin, exports, repository, and bugs match `orb-voice` and the then-current GitHub repository.
 - [x] `<orb-voice>`, `defineOrbVoice`, and `orb-voice-*` events are the active contract.
 - [x] ADR-0023 and SPEC-032 remain and are marked reverted by ADR-0024 and SPEC-033.
 - [x] `./cli/orb-voice check` and `npm pack --dry-run` report package name `orb-voice`. No publish, tag, or release.

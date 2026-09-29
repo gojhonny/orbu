@@ -1,6 +1,5 @@
 import configuration from '@configuration'
 import { ORBO_DEFAULT_APPEARANCE_BY_STATE } from '@core/appearance/appearance.data'
-import type { OrboConfigurationSource } from '@core/config.types'
 import { ORBO_DEFAULT_MOTION } from '@core/motion/default-motion.data'
 import { ORBO_DEFAULT_SPEECH } from '@talk/default-speech.data'
 import { describe, expect, it, vi } from 'vitest'
@@ -97,40 +96,19 @@ describe('core/transform-configuration', () => {
     )
   })
 
-  it('normalizes legacy preset configuration without changing colors or the caller input', () => {
-    const source = legacySource()
-    const { neongate, ...presets } = source.appearance.presets
-    const input = {
-      ...source,
-      appearance: {
-        ...source.appearance,
-        defaultPreset: 'gojhonny',
-        presetNames: ['gojhonny', 'periwinkle', 'magenta', 'peach', 'mocha', 'ivory'],
-        presets: { gojhonny: { ...neongate, primary: '#123456' }, ...presets }
-      }
-    } satisfies OrboConfigurationSource
+  it('rejects unsupported preset configuration without changing caller input', () => {
+    const input = structuredClone(configuration)
+    Object.assign(input.appearance, { defaultPreset: 'unsupported' })
     const before = structuredClone(input)
-    const result = transformOrboConfiguration(input)
-
-    expect(result.appearance.defaultPreset).toBe('neongate')
-    expect(result.appearance.presetNames[0]).toBe('neongate')
-    expect(result.appearance.presets.neongate.primary).toBe('#123456')
-    expect(result.appearance.presets.gojhonny).toBe(result.appearance.presets.neongate)
-    expect(Object.keys(result.appearance.presets)).toEqual(result.appearance.presetNames)
+    expect(() => transformOrboConfiguration(input)).toThrow(
+      'Invalid Orbo configuration at $.appearance.defaultPreset: unsupported value or reference.'
+    )
     expect(input).toEqual(before)
-    expect(Object.isFrozen(input.appearance.presets.gojhonny)).toBe(false)
-    expect(Object.isFrozen(result.appearance.presets.gojhonny)).toBe(true)
-
-    // Both compact source and the older complete configuration remain supported.
-    const { motion: _motion, speech: _speech, ...compact } = input
-    expect(transformOrboConfiguration(compact).appearance).toEqual(result.appearance)
-    const alternate = { ...input, appearance: { ...input.appearance, defaultPreset: 'peach' } }
-    expect(transformOrboConfiguration(alternate).appearance.defaultPreset).toBe('peach')
   })
 
   it('rejects ambiguous duplicate palette declarations instead of silently choosing colors', () => {
     const input = structuredClone(configuration)
-    Object.assign(input.appearance.presets, { gojhonny: input.appearance.presets.neongate })
+    Object.assign(input.appearance.presets, { unsupported: input.appearance.presets.neongate })
     expect(() => transformOrboConfiguration(input)).toThrow(
       'Invalid Orbo configuration at $.appearance.presets: unknown configuration field.'
     )

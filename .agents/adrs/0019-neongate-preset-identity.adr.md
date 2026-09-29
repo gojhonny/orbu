@@ -6,22 +6,22 @@
 - Mode: Prospective
 
 OrbZ was later renamed to OrbV. Package identity is unscoped `orbv` and GitHub
-`gojhonny/orbv` (ADR-0021). This record remains the NeonGate preset decision;
+the then-current GitHub repository (ADR-0021). This record remains the NeonGate preset decision;
 do not rename the `neongate` preset.
 
 ## Context
 
 The owner clarified that NeonGate is the palette's brand. The GitHub move to
-`gojhonny/orbz` did not authorize renaming that preset. Version 1.0.1 has already
+the account transfer did not authorize renaming that preset. Version 1.0.1 has already
 published the accidental identifier and its typed palette exports.
 
 ## Decision
 
 Restore `neongate` as the canonical default and first of six preset names.
 Preserve all five palette colors. Continue to use `@neongate-ai/orbz` for npm
-and `gojhonny/orbz` for GitHub.
+and the then-current personal account for GitHub.
 
-Accept `gojhonny` as a deprecated input alias and normalize public attributes
+Accept the account-derived preset key as a deprecated input alias and normalize public attributes
 and properties to `neongate`. Preserve direct palette access through a frozen,
 non-enumerable alias in the runtime tree; derived compatibility exports retain
 that same reference. Canonical enumeration, JSON, examples and installer output

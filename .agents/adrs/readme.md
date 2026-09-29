@@ -18,7 +18,7 @@ ADR to hide a changed decision; record the update and supersede it explicitly.
 [ADR-0016](0016-compact-configuration-and-internal-data.adr.md) partially supersedes
 ADR-0013: compact JSON plus typed internal data defaults and compatible composition.
 
-[ADR-0017](0017-gojhonny-package-identity.adr.md) records the owner-requested package,
+[ADR-0017](0017-legacy-package-identity.adr.md) records the owner-requested package,
 repository and default-preset identity migration, including consumer compatibility
 and the separate npm publication boundary.
 
@@ -39,7 +39,7 @@ consumer setup separate. Public command spelling is `orbv` (ADR-0021).
 
 [ADR-0022](0022-orb-voice-distribution.adr.md) makes `orb-voice` the npm
 package, public CLI, and `<orb-voice>` element. GitHub metadata targets
-`gojhonny/orb-voice`.
+`jonatassales/orbo`.
 
 [ADR-0023](0023-orbu-package-identity.adr.md) attempted npm `orbu` and
 `<orb-u>`. npm rejected that package name. ADR-0024 reverts it.
@@ -49,4 +49,4 @@ package, public CLI, and `<orb-voice>` element. GitHub metadata targets
 
 [ADR-0025](0025-orbo-product-identity.adr.md) makes Orbo the product, `orbo-voice`
 the npm package, `<orb-o>` the element, and `orbo` the CLI. GitHub metadata
-targets `gojhonny/orbo`.
+targets `jonatassales/orbo`.

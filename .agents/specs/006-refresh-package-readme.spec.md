@@ -13,7 +13,7 @@ localization, silence semantics, accessibility, or engineering commands.
 
 ## Scope
 
-Rewrite the root README, place the gojhonny sphere beside the title, and document
+Rewrite the root README, place the sphere artwork beside the title, and document
 the public package contract without adding documentation-site code.
 
 ## Acceptance criteria
@@ -28,7 +28,7 @@ the public package contract without adding documentation-site code.
 ## Evidence
 
 - `README.md`
-- `assets/images/gojhonny-sphere.png`
+- `assets/images/orbo-sphere.png`
 - `.audits/documentation.audit.sh`
 
 ## Related records

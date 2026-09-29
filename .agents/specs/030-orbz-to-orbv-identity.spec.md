@@ -9,7 +9,7 @@
 ## Problem
 
 The published product still presents as OrbZ (`@neongate-ai/orbz`, `<orb-z>`,
-`orb`, `gojhonny/orbz`) while the owner has selected OrbV as the canonical
+`orb`, the then-current GitHub repository) while the owner has selected OrbV as the canonical
 identity. A first-time developer must not encounter a mixture of old and new
 names in current-state source, package metadata, CLI UX, audits, or consumer
 documentation.
@@ -32,7 +32,7 @@ state conclusions, rules, context, skills, audits, and the README use OrbV.
 
 ## Requirements
 
-1. `package.json#name` is `orbv`. Repository and bugs URLs use `gojhonny/orbv`.
+1. `package.json#name` is `orbv`. Repository and bugs URLs use the then-current GitHub repository.
    Homepage and the README Documentation link are
    `https://neongate.com.br/docs/orbz/overview`. Version remains the current
    stable SemVer on `main`.
@@ -67,7 +67,7 @@ state conclusions, rules, context, skills, audits, and the README use OrbV.
   configuration clone module), source/test typecheck, 52 tests in 19 suites,
   both builds, SemVer 1.0.3, and all audits.
 - Ownership, package, CLI, and documentation audits assert `orbv`, `<orb-v>`,
-  `npx orbv --setup`, GitHub `gojhonny/orbv`, and tarball `orbv-*.tgz`.
+  `npx orbv --setup`, the GitHub repository used at the time, and tarball `orbv-*.tgz`.
 - Dist entries are `dist/orbv.js` and `dist/standalone/orbv.js`.
 
 ## Related records
@@ -81,7 +81,7 @@ state conclusions, rules, context, skills, audits, and the README use OrbV.
 This is a breaking public rename for consumers of `@neongate-ai/orbz`, `<orb-z>`,
 `defineOrbz`, `orbz-*` events, and the `orb` binary. The new package name `orbv`
 is a separate npm identity; the old package is left published until a later
-owner-approved deprecation. GitHub metadata targets `gojhonny/orbv` before the
+owner-approved deprecation. GitHub metadata targets the then-current GitHub repository before the
 remote rename exists; release remains inert until that repository name is in
 use. The owner-specified documentation URL still contains `/orbz/` because the
 external docs path was not moved in this change.

@@ -20,7 +20,7 @@ describe('core/merge-colors', () => {
     })
   })
 
-  it('enumerates six canonical presets while preserving the deprecated palette alias', () => {
+  it('exposes six immutable canonical presets', () => {
     expect(ORBO_PRESET_NAMES).toEqual([
       'neongate',
       'periwinkle',
@@ -30,11 +30,9 @@ describe('core/merge-colors', () => {
       'ivory'
     ])
     expect(Object.keys(ORBO_PRESETS)).toEqual(ORBO_PRESET_NAMES)
-    expect(ORBO_PRESETS.gojhonny).toBe(ORBO_PRESETS.neongate)
     expect(orboConfiguration.appearance.presets).toBe(ORBO_PRESETS)
-    expect(Object.isFrozen(ORBO_PRESETS.gojhonny)).toBe(true)
-    expect(Reflect.set(ORBO_PRESETS, 'gojhonny', {})).toBe(false)
-    expect(Reflect.set(ORBO_PRESETS.gojhonny, 'primary', '#000000')).toBe(false)
+    expect(Object.isFrozen(ORBO_PRESETS.neongate)).toBe(true)
+    expect(Reflect.set(ORBO_PRESETS.neongate, 'primary', '#000000')).toBe(false)
   })
 
   it('merges an override without mutating the default preset', () => {

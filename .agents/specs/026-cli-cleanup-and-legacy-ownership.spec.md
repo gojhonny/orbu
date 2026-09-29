@@ -18,7 +18,7 @@ only cleans named output directories at the checkout root, and can delete
 tracked files. The supplied reference CLI demonstrates default dependency
 cleanup, recursive generated-state discovery and tracked-path protection.
 Repository metadata, installer commands, the default palette name and release
-automation still point at the previous owner instead of `gojhonny`.
+automation still pointed at the previous owner instead of the then-current account.
 
 ## Scope
 
@@ -45,8 +45,8 @@ do not merge, change the version, create a release tag or publish to npm.
    do not require Node, pnpm or installed dependencies. Retain published-package
    repository guards. Do not import application-specific commands.
 4. Replace previous-owner references across tracked text and filenames with
-   `gojhonny`, including `@gojhonny/orbz`, repository and issue URLs, author,
-   license, install examples, release workflow and the default `gojhonny` preset.
+   the then-current personal account, including package scope, repository and issue
+   URLs, author, license, install examples, release workflow and default preset.
    Preserve palette values and all unrelated visual, speech and SSR behavior.
 5. Update README and active harness guidance to describe current configuration,
    cleanup semantics and ownership. Record migration compatibility explicitly;

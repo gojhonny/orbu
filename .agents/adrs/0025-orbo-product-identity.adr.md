@@ -9,7 +9,7 @@
 
 ADR-0024 restored Orb Voice after npm rejected the unscoped `orbu` name. The owner has now selected a split identity: the product, runtime, and public API are Orbo, while the npm distribution name is `orbo-voice`. The custom element must contain a hyphen, so it is `<orb-o>` rather than `<orbo>`.
 
-The GitHub repository target is `gojhonny/orbo`. Renaming the GitHub repository is a separate owner action.
+The GitHub repository is now `jonatassales/orbo`; its rename was a separate owner action.
 
 ## Decision
 
@@ -17,7 +17,7 @@ Orbo is the canonical product identity. The npm package name is the distribution
 
 - Brand: Orbo
 - npm: `orbo-voice`
-- GitHub metadata: `gojhonny/orbo`
+- GitHub metadata: `jonatassales/orbo`
 - Custom element: `<orb-o>` only
 - Public CLI: `orbo`, with consumer setup `npx orbo-voice --setup`
 - Events: `orbo-*`
@@ -33,7 +33,7 @@ This supersedes ADR-0024. Publication, deprecation, tags, and GitHub releases ar
 
 ## Consequences
 
-Active source, package metadata, the CLI, audits, and consumer documentation use the split identity. Historical ADRs and SPECs keep Orb Voice, OrbV, and Orbu when they record those decisions. The release workflow publishes `orbo-voice` only when `github.repository` is `gojhonny/orbo`.
+Active source, package metadata, the CLI, audits, and consumer documentation use the split identity. Historical ADRs and SPECs keep Orb Voice, OrbV, and Orbu when they record those decisions. The release workflow publishes `orbo-voice` only when `github.repository` is `jonatassales/orbo`.
 
 ## Evidence
 
